@@ -1,0 +1,200 @@
+/* Setting the margin for the body element to 0 removes all default margins entered by the browser */
+/* They're margin-top, margin-left,top and bottom - all set to 0 */
+/* align all elements in the middle of the page - within the body element */
+/* the text-align center works when the element occupies the whole width of the screen */
+/* use can use html pesticide to view what elements cover the screen length */
+/* The font family goes from specific to non-specific - Helvetica Neue to sans-serif */
+
+/************************TAG SELECTOR***********************/
+body {
+  color: #40514E;
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+
+  /* font-size: 200px; */
+}
+
+/* We are more interested in the top margin for the h1 element */
+/* using em helps with dynamically adjusting the screen based on preference set by the user in the browser */
+/* using a percentage font-sizing ensures that the user port/screen scales with changes to the browser settings */
+/* to centre the h1 and reduce the margin between the h1 and h2 tag on our website, we
+adjust the margin around the h1 tag - see h1 attribute below: */
+/* auto ensures that the element is centred */
+h1 {
+  margin:50 auto 0 auto;
+  font-family: 'Sacramento', cursive;
+  font-size: 5.625rem;
+  color: #66BFBF;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #66BFBF;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #11999E;
+}
+
+/* set all line heights to 2 across the site for all paragraphs */
+p{
+    line-height: 2;
+    text-align: left;
+}
+
+hr{
+width:4%;
+border: dotted 10px #EAF6F6;
+/* border-width: 10px; */
+border-bottom: none;
+margin: 100px auto;
+/* color: #EAF6F6; */
+}
+
+a{
+  color:#11999E;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+a:hover{
+color: #EAF6F6;
+}
+
+/************************CLASS SELECTOR***********************/
+
+.pro {
+  text-decoration: underline;
+}
+
+/* This sets the width of the paragraph to 30% of it current parent container
+Which is the div tag in this case
+margin of auto on all four sides make centers the paragraph in the middle of the parent container */
+.intro{
+  width:50%;
+  margin: auto;
+}
+
+.top-container {
+  background-color: #d2fafb;
+  position: relative;
+  padding-top: 100px;
+}
+
+.proImageMain{
+  border-radius: 360px;
+  margin:30px;
+  height: 120px;
+}
+.middle-container {
+  /* position: relative; */
+  margin: 100px 0;
+}
+
+.proImageTop{
+  border-radius: 360px;
+  float: left;
+  margin-right: 30px;
+  height: 120px;
+}
+
+.proImageBottom{
+  border-radius: 360px;
+  float: right;
+  margin-right: 30px;
+  height: 120px;
+}
+
+/* We use the padding to hide the gap between the div tag and the buttom of the screen */
+.bottom-container {
+  background-color: #66BFbF;
+  padding: 50px 0 20px;
+}
+
+/* position for the images are set relative to the container that holds them */
+/* otherwise they'll be relative to the body of the webpage */
+.cloud-img-top {
+  position: absolute;
+  top: 50px;
+  right: 300px;
+}
+
+/* move the img so the mountain can centre properly on the screen */
+/* in order to move our bottom img, we need to make it relative to an element */
+/* in this case, we make it relative to the middle container */
+.cloud-img-bottom {
+  position: absolute;
+  bottom: 300px;
+  left: 300px;
+}
+
+.anchorTag{
+  color: #11999E;
+}
+
+/* reducing the width to 50% ensures that the div is displayed on 50% of the screen */
+/* setting the margin to auto ensures that the element is centered on the webpage */
+.skill-row{
+  width: 50%;
+  margin:50px auto 50px auto;
+  text-align: left;
+  padding-right: 30px;
+}
+
+/* margin for contact message class - top, left and right, bottom */
+.contact-message{
+  width:60%;
+  margin:40px auto 60px;
+}
+.contact-me{
+  width: 50%;
+  margin: 50px auto 50px auto;
+}
+
+.butn {
+  background: #11cdd4;
+  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.butn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+
+
+.copyright{
+  text-align: center;
+  font-size: 0.75rem;
+  color:#EAF6F6;
+  padding: 20px 0;
+}
+
+/* Where as the float property makes the text wrap around the image,
+The clear property makes sure that the text is not wrapped around the image
+It's seen like the anti-clear property ensuring that the margin next to where the text begins is clear */
+
+
+/************************DIV SELECTOR***********************/

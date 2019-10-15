@@ -1,0 +1,225 @@
+Displaying elements in web design has 4 modes: inline, block, inline-block and none.
+Inline display allows other elements sit next to it while the block display does not allow other elements next to it.
+Inline-block give  the best of both worlds and allows for other elements to side next to the elements while also allowing styles to be applied on the elements
+a <p></p> tag is a block display element and does not allow for other elements around it
+To add design to text in a <p></p>, we use the span element which allows for design on text using a class.
+We can also use visibility or display:none to hide hide text in our webpage depending on requirements.
+see my code pen page for more information on display modes - https://codepen.io/BisongT/pen/BaBPPKv.
+Note that with inline elements, you can not change the width of the element but can do so with block elements
+inline-block enables you to place elements on the same line and also change the widths
+
+Relative positioning challenge - https://codepen.io/BisongT/pen/bGbjjQG
+We can use the inline-block display to set all 3 divs on the same line
+alternatively, I used only the relative positioning without the inline display to set all 3 div elements on the same level
+code below:
+.red{
+  background-color: red;
+  height:200px;
+  width:200px;
+  position: relative;
+  left:400px;
+}
+
+.yellow{
+  background-color: yellow;
+  height:200px;
+  width:200px;
+  position: relative;
+  left:200px;
+  bottom:400px;
+}
+
+.blue{
+  background-color: blue;
+  height:200px;
+  width:200px;
+  position: relative;
+  bottom: 200px;
+}
+
+Using the inline-block display, the code will look like this:
+Note that the space between the squares is that which has been added by the browser
+Getting ride of the position completely, will align the squares accurately
+You can remove the position if confused in the future.
+.red{
+  background-color: red;
+  height:100px;
+  width:100px;
+  display: inline-block;
+  position: relative;
+  left: 200px;
+}
+
+.yellow{
+  background-color: yellow;
+  height:100px;
+  width:100px;
+  display: inline-block;
+  position: relative;
+  right:100px;
+}
+
+.blue{
+  background-color: blue;
+  height:100px;
+  width:100px;
+  display: inline-block;
+  position: relative;
+  right: 100px;
+}
+
+//Absolute position unlike relative position, takes into account the position of the element to the parent which is the screen of display
+Absolute position is relative to the parent (screen, div etc) while relative position is relative to the object itself
+Absolute position takes away the element from the natural flow of the document
+// use the margin attribute to remove any code injected by the browser(default code)
+// using the absolute position makes the element free to be positioned as intended
+// as it takes it away from the actual position and other elements will occupy the space
+on-like in the case of the relative position which still leaves the ghost of the object, absolute position takes both body and soul of the element away from the original position
+Note: Absolute position is always relative to the parent element and not only the body
+This could be body, div etc - position of an element is relative to the parent container
+body{
+margin: 0;
+}
+
+.red{
+  background-color: red;
+  height: 100px;
+  width:100px;
+  position: absolute;
+  top:200px;
+  left:200px;
+}
+
+.blue{
+  background-color: blue;
+  height: 100px;
+  width:100px;
+  position: absolute;
+  top: 100px;
+  left:100px;
+}
+
+.yellow{
+  background-color: yellow;
+  height: 100px;
+  width:100px;
+  position: absolute;
+}
+
+// Positioning of elements relative to the parent elements
+<div class="container">
+   <div class="red">
+  </div>
+</div>
+
+<div class="blue">
+</div>
+
+<div class="yellow">
+</div>
+//css code
+body{
+  margin: 0;
+}
+
+.container{
+  position: relative;
+  height: 300px;
+  width: 300px;
+  background-color: grey;
+
+}
+
+.red{
+  height: 100px;
+  width: 100px;
+  background-color:red;
+  position: absolute;
+  right: 0;
+}
+
+.blue{
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+
+.yellow{
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+}
+
+//Fixed position can be used to keep an element fixed to a position on the screen
+// This can be used to keep in a navigation bar or side bar to keep it still while a user scrolls through a webpage.
+Code for position based on a div and not relative to the body of the webpage: https://codepen.io/BisongT/pen/XWrBPzB
+
+Code:
+<body>
+<div class="container">
+   <div class="red">
+  </div>
+</div>
+
+<div class="blue">
+</div>
+
+<div class="yellow">
+</div>
+
+  <h1>Hello world</h1>
+  <h1>Hello world</h1>
+  <h1>Hello world</h1>
+  <h1>Hello world</h1>
+  <h1>Hello world</h1>
+  <h1>Hello world</h1>
+   <h1>Hello world</h1>
+   <h1>Hello world</h1>
+   <h1>Hello world</h1>
+   <h1>Hello world</h1>
+   <h1>Hello world</h1>
+   <h1>Hello world</h1>
+</body>
+
+//css code
+body{
+  margin: 0;
+}
+
+.container{
+  position: relative;
+  height: 300px;
+  width: 300px;
+  background-color: grey;
+
+}
+
+.red{
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  position: absolute;
+  right: 0;
+}
+
+.blue{
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+
+.yellow{
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  position: fixed;
+  top: 0;
+}
