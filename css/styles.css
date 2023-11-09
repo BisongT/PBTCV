@@ -106,7 +106,7 @@ margin of auto on all four sides make centers the paragraph in the middle of the
 
 .proImageBottom{
   border-radius: 360px;
-  float: right;
+  float: left;
   margin-right: 30px;
   height: 120px;
 }
